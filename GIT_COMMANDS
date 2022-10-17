@@ -17,4 +17,4 @@ git remote add origin https://github.com/USERNAME/RepoName.git
 
 Step 5: Push the changes to remote repository
 git push -u origin master
-
+(Depending on the configuration, the branch name can be "master" or "main"
