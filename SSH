@@ -1,0 +1,47 @@
+1. Add public key to GitHub
+
+2. Enable SSH Agent & add the SSH Key to the agent
+# start the ssh-agent in the background
+$ eval "$(ssh-agent -s)"
+
+# Add your SSH key to the ssh-agent
+$ ssh-add ~/.ssh/id_rsa.pub
+
+3. Test SSH connection
+ssh -T git@github.com
+# another alternative way to verify if firewall issues are present
+$ ssh -T -p 443 git@github.com
+
+4. Remote URL switching and SSH push
+Remote URL switching and SSH push
+# List your existing remotes in order to get the name of the remote you want to change
+$ git remote -v
+ # set remote URL
+$ git git remote set-url origin git@github.com:USERNAME/OTHERREPOSITORY.git
+ # Verify new remote URL
+$ git remote -v
+Changing passphrase
+# for changing password occasionally
+$ ssh-keygen -p
+
+5. Changing Passphrase
+$ ssh-keygen -p
+
+6. SWITCHING BETWEEN GITHUB AND HTTPS
+[root@localhost oracle-script-lib]# git remote -v 
+origin	git@github.com:narmanomar/oracle-script-lib (fetch)
+origin	git@github.com:narmanomar/oracle-script-lib (push)
+[root@localhost oracle-script-lib]# 
+[root@localhost oracle-script-lib]# git remote set-url origin https://github.com/narmanomar/oracle-script-lib
+[root@localhost oracle-script-lib]# 
+[root@localhost oracle-script-lib]# 
+[root@localhost oracle-script-lib]# git remote -v 
+origin	https://github.com/narmanomar/oracle-script-lib (fetch)
+origin	https://github.com/narmanomar/oracle-script-lib (push)
+[root@localhost oracle-script-lib]# 
+[root@localhost oracle-script-lib]# git remote  set-url origin git@github.com:narmanomar/oracle-script-lib
+[root@localhost oracle-script-lib]# 
+[root@localhost oracle-script-lib]# git remote -v 
+origin	git@github.com:narmanomar/oracle-script-lib (fetch)
+origin	git@github.com:narmanomar/oracle-script-lib (push)
+[root@localhost oracle-script-lib]# 

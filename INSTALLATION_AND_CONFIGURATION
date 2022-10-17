@@ -1,0 +1,7 @@
+To configure the name that GIT will associate with youyr work, run this command:
+
+git config --global user.name "name surname"
+
+Do the same for your e-mail
+
+git config --global user.email user@mail.com
